@@ -37,10 +37,12 @@ class TV:
         if (self._estado==True) and (1<=canal<=120):
             self._canal=canal
 
-    def setNumTV(self,numTV):
-        TV._numTV=numTV
-    def getNumTV(self):
-        return TV._numTV
+    @classmethod
+    def setNumTV(cls,numTV):
+        cls._numTV=numTV
+    @classmethod    
+    def getNumTV(cls):
+        return cls._numTV
     
     def turnOn(self):
         self._estado=True
